@@ -41,7 +41,6 @@ export class TranslationService {
         return Promise.reject(new QualityThresholdNotMet(text));
       })
       .catch((error) => {
-        // Check for NotAvailable error
         if (
           error.constructor.name === "NotAvailable" ||
           error.message === "Not yet translated" ||
